@@ -1,0 +1,119 @@
+{
+  "cnpj": "17.184.037",
+  "nome": "Banco Mercantil do Brasil S.A.",
+  "dataUltimaAtualizacao": "2021-03-01",
+  "contatoArea": "Ger\u00eancia de Riscos Financeiros e Gest\u00e3o de Capital",
+  "contatoEmail": "riscos_financeiros@mercantil.com.br",
+  "conjuntos": [
+    {
+      "ref": "https://www.bcb.gov.br/htms/dasfn/pilar3/1.2.0/openapi.json",
+      "nome": "Relat\u00f3rio de Pilar 3",
+      "urlBase": "https://mercantildobrasil.com.br/RelacoesInvestidores/Pilar3",
+      "urlVisualizacao": "https://mercantildobrasil.com.br/RelacoesInvestidores/Paginas/Gerenciamento-de-Riscos-Pilar3.aspx",
+      "situacao": "Produ\u00e7\u00e3o",
+      "recursos": [
+        {
+          "nome": "KM1 - Informa\u00e7\u00f5es quantitativas sobre os requerimentos prudenciais ",
+          "caminhoRecurso": "/km1/{trimestre}",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": ["2021-1"]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "nome": "OV1 - Vis\u00e3o geral dos ativos ponderados pelo risco (RWA)",
+          "caminhoRecurso": "/ov1/{trimestre}",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": ["2021-1"]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "nome": "LR2 - Informa\u00e7\u00f5es detalhadas sobre a Raz\u00e3o de Alavancagem",
+          "caminhoRecurso": "/lr2/{trimestre}",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": ["2021-1"]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "nome": "MR1 - Abordagem padronizada - fatores de risco associados ao risco de mercado",
+          "caminhoRecurso": "/mr1/{trimestre}",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": ["2021-1"]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "nome": "OPD - Total da exposi\u00e7\u00e3o associada a instrumentos financeiros derivativos",
+          "caminhoRecurso": "/opd/{trimestre}",
+          "parametros": {
+            "nome": "trimestre",
+            "valores": ["2021-1"]
+          },
+          "periodicidade": "trimestral"
+        },
+        {
+          "nome": "OVA - Vis\u00e3o geral do gerenciamento de riscos da institui\u00e7\u00e3o",
+          "caminhoRecurso": "/ova/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "nome": "CRA - Informa\u00e7\u00f5es qualitativas sobre o gerenciamento do risco de cr\u00e9dito",
+          "caminhoRecurso": "/cra/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "nome": "CCRA - Informa\u00e7\u00f5es qualitativas sobre o gerenciamento do risco de cr\u00e9dito de contraparte (CCR)",
+          "caminhoRecurso": "/ccra/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "nome": "MRA - Informa\u00e7\u00f5es qualitativas sobre o gerenciamento do risco de mercado",
+          "caminhoRecurso": "/mra/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "nome": "IRRBBA - Informa\u00e7\u00f5es qualitativas sobre o gerenciamento do IRRBB",
+          "caminhoRecurso": "/irrbba/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        },
+        {
+          "nome": "LIQA - Informa\u00e7\u00f5es qualitativas sobre o gerenciamento do risco de liquidez",
+          "caminhoRecurso": "/liqa/{ano}",
+          "parametros": {
+            "nome": "ano",
+            "valores": ["2021"]
+          },
+          "periodicidade": "anual"
+        }
+      ],
+      "contatoArea": "Ger\u00eancia de Riscos Financeiros e Gest\u00e3o de Capital",
+      "contatoEmail": "riscos_financeiros@mercantil.com.br"
+    }
+  ]
+}
