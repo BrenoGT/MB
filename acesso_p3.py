@@ -2,7 +2,7 @@ import requests
 import json
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-cat_file = r'C:\Users\Breno\Documents\Pessoal\TI\Linguagens\Python\Workspace_Python\MB\p3\catalogo.json'
+cat_file = r''
 
 
 def read_json(file_path: str, encoding: str = 'utf8') -> json:
@@ -24,7 +24,7 @@ def main():
     try:
         data = read_json(cat_file)
     except FileNotFoundError:
-        print(f'Não foi possível encontrar o arquivo.\nCaminho: {cat_file}')
+        print(f'Não foi possível encontrar o arquivo.\nCaminho: {cat_file}\n')
     else:
         recursos = data['conjuntos'][0]['recursos']
         url_base = data['conjuntos'][0]['urlBase']
@@ -36,20 +36,16 @@ def main():
                 resto_url = caminho.replace('{%s}' % nome_sub, d)
                 caminho_completo = url_base + resto_url + '/' + nome.lower() + '.json'
                 try:
+                    print(f'{nome}: {caminho_completo}')
                     api = requests.get(caminho_completo, verify=False).json()
                     if len(api) < 1:
-                        print(f'Link: {caminho_completo}')
-                        print(f'A API do {nome} está vazia.\n')
+                        print('\t> Está vazia.')
                 except json.JSONDecodeError as json_err:
-                    print(f'Link: {caminho_completo}')
-                    print('Erro ao ler o JSON\n')
-                    print(json_err, end='\n\n')
+                    print(f'\t> Erro ao ler o JSON - [{json_err}]\n')
                 except Exception as err:
-                    print(f'Link: {caminho_completo}')
-                    print('Não foi possível ler a API.')
-                    print(err, end='\n\n')
+                    print(f'Não foi possível ler a API - [{err}]\n')
                 else:
-                    print(f'Acesso a {nome} está ok!')
+                    print(f'\t> Acesso ok!\n')
 
 
 if __name__ == '__main__':
